@@ -1,0 +1,31 @@
+{
+    "name": "c2is/xml-iterator",
+    "type": "library",
+    "description": "Library for iterating over XML from a string or DomDocument object",
+    "keywords": ["xml", "iterator"],
+    "homepage": "http://github.com/",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Guillaume Manen",
+            "email": "g.manen@c2is.fr"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2"
+    },
+    "suggest": {
+        "jms/serializer": "Useful to subsequently parse the iterated XML."
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-0": {
+            "C2iS\\Component\\Xml": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    }
+}

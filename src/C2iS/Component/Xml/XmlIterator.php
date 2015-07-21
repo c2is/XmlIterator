@@ -46,7 +46,9 @@ class XmlIterator implements \Iterator, \Countable
     public function rewind()
     {
         $dom = new \DOMDocument();
+        set_error_handler(function() { /* ignore warning errors from DomDocument::loadXML*/ }, E_WARNING);
         @$dom->loadXML($this->content);
+        restore_error_handler();
         $this->currentContent = $dom;
     }
 
